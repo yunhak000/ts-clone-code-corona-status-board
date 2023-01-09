@@ -1,0 +1,15 @@
+// 기본적인 ts 컴파일 옵션들
+{
+  "compilerOptions": {
+    "allowJs": false, // js파일을 ts로 인식하겠다.
+    "target": "ES5", //ts파일을 js파일로 변경해주는 것이 tsc 명령어인데 어떤 언어로 컴파일 할 것인지?
+    "outDir": "./dist", //컴파일된 파일이 어떤 파일안에 들어 갈 것인지
+    "moduleResolution": "Node", //프로미스를 인식시켜주기 위해
+    "lib": ["ES2015", "DOM", "DOM.Iterable"],
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types", "./types"], //기본적으론 node_modules안에 @types를 가져오는데 없으면 types라는 폴더 안에서 가져온다.
+    "strict": true
+  },
+  "include": ["./src/**/*", "src/app.js"] //이 프로젝트를 기준으로 어떤 프로젝트를 컴파일 시킬 것이냐 (현재 설정은 src폴더 안에 모든파일)
+}
